@@ -1,0 +1,27 @@
+:root {
+  --background: #ffc700;
+  --bs-primary-rgb: #12296c;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--bs-primary-rgb);
+  font-weight: 300;
+  font-size: 1.2rem;
+  background-image: url(../img/noise-bg.png);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Unbonded", sans-serif;
+  font-weight: 800;
+}
+
+.container-fluid-costum {
+  max-width: 1600px;
+}
