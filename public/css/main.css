@@ -67,6 +67,7 @@ h6 {
   --bs-btn-disabled-border-color: var(--bs-primary-rgb);
   --bs-gradient: none;
 }
+
 /* Home */
 
 @media (min-width: 1200px) {
@@ -75,8 +76,6 @@ h6 {
       url("../img/human-2.svg") right bottom no-repeat,
       url("../img/noise-bg.png") left top repeat, var(--background);
   }
-}
-.home {
 }
 
 .home-title::before {
