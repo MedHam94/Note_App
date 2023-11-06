@@ -10,8 +10,21 @@ const MongoStore = require("connect-mongo");
 const PORT = process.env.PORT || 5000;
 const app = express();
 
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: true,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGODB_URI,
+    }),
+    // cookie: { maxAge: new Date ( Date.now() + (3600000) ) }
+    // Date.now() - 30 * 24 * 60 * 60 * 1000
+  })
+);
+
 app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.session());
 
 app.use(express.urlencoded({ extended: true }));
 
